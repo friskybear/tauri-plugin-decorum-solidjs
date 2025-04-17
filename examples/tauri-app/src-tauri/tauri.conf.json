@@ -1,30 +1,27 @@
 {
+  "$schema": "https://schema.tauri.app/config/2",
   "productName": "tauri-app",
-  "version": "0.0.0",
-  "identifier": "com.tauritempplugin.dev",
+  "version": "0.1.0",
+  "identifier": "com.tauri-app.app",
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
     "frontendDist": "../dist"
   },
   "app": {
-    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "tauri-app",
+        "width": 800,
+        "height": 600,
+        "alwaysOnTop": true
+      }
+    ],
     "security": {
       "csp": null
     },
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "tauri-app",
-        "width": 600,
-        "height": 400,
-        "titleBarStyle": "Overlay",
-        "hiddenTitle": true,
-        "decorations": false
-      }
-    ]
+    "withGlobalTauri": true
   },
   "bundle": {
     "active": true,
@@ -38,4 +35,3 @@
     ]
   }
 }
-
