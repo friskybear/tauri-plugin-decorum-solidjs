@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 	let tbEl = document.querySelector("[data-tauri-decorum-tb]");
 
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const drag = document.createElement("div");
 		drag.style.width = "100%";
 		drag.style.height = "100%";
+		drag.id = "drag-header-region";
 		drag.style.background = "transparent";
 		drag.setAttribute("data-tauri-drag-region", "");
 		tbEl.appendChild(drag);
